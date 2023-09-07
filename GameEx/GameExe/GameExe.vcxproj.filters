@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="NewFilter1">
+      <UniqueIdentifier>{b6ad5799-9b4d-43e8-90f5-cc0a9f3b31af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main">
+      <UniqueIdentifier>{e8d807d5-b5b5-45d5-9186-22e074e51f7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{c32c9619-013a-454e-9851-be66cf4b023d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{b5ed8dce-688a-4cf1-b706-2fe287779074}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\Common">
+      <UniqueIdentifier>{4d7dca6e-2ebf-41c4-81a8-81d36c2fa631}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\LightDemo">
+      <UniqueIdentifier>{7277b748-b6b0-4e9e-850f-c0260a2c641f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\DX_BOOK">
+      <UniqueIdentifier>{62bcc767-27a8-48a7-9e89-12ea2502cd73}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\DXBOOK">
+      <UniqueIdentifier>{daea3920-19fd-4513-aabb-9ae9b7c7b728}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\DefualtRenderingShader">
+      <UniqueIdentifier>{efbf97b7-6a88-479d-97f0-f9ef18dc5067}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="kkk.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="TriangleDemo.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="02.CameraDemo.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="03.TextureDemo.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="04.SamplerDemo.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="05.ColorBoxDemo.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="06.HeightMapDemo.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="07.NormalTestDemo.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="08.LightDemo.cpp">
+      <Filter>Game\LightDemo</Filter>
+    </ClCompile>
+    <ClCompile Include="09.ModelInitDemo.cpp">
+      <Filter>Game\LightDemo</Filter>
+    </ClCompile>
+    <ClCompile Include="10.AnimDemo.cpp">
+      <Filter>Game\LightDemo</Filter>
+    </ClCompile>
+    <ClCompile Include="11.InstancingDemo.cpp">
+      <Filter>Game\LightDemo</Filter>
+    </ClCompile>
+    <ClCompile Include="12.PickingDemo.cpp">
+      <Filter>Game\LightDemo</Filter>
+    </ClCompile>
+    <ClCompile Include="b1.TextureLightDemo.cpp">
+      <Filter>Game\DX_BOOK</Filter>
+    </ClCompile>
+    <ClCompile Include="b2.mirrorDemo.cpp">
+      <Filter>Game\DX_BOOK</Filter>
+    </ClCompile>
+    <ClCompile Include="b3.TessilDemo.cpp">
+      <Filter>Game\DX_BOOK</Filter>
+    </ClCompile>
+    <ClCompile Include="b4.TessilDemo.cpp">
+      <Filter>Game\DX_BOOK</Filter>
+    </ClCompile>
+    <ClCompile Include="b5.ShadowDemo.cpp">
+      <Filter>Game\DX_BOOK</Filter>
+    </ClCompile>
+    <ClCompile Include="b6.TextureBufferDemo.cpp">
+      <Filter>Game\DX_BOOK</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="kkk.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="main.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="TriangleDemo.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="02.CameraDemo.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="03.TextureDemo.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="04.SamplerDemo.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="05.ColorBoxDemo.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="06.HeightMapDemo.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="07.NormalTestDemo.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="08.LightDemo.h">
+      <Filter>Game\LightDemo</Filter>
+    </ClInclude>
+    <ClInclude Include="09.ModelInitDemo.h">
+      <Filter>Game\LightDemo</Filter>
+    </ClInclude>
+    <ClInclude Include="10.AnimDemo.h">
+      <Filter>Game\LightDemo</Filter>
+    </ClInclude>
+    <ClInclude Include="11.InstancingDemo.h">
+      <Filter>Game\LightDemo</Filter>
+    </ClInclude>
+    <ClInclude Include="12.PickingDemo.h">
+      <Filter>Game\LightDemo</Filter>
+    </ClInclude>
+    <ClInclude Include="b1.TextureLightDemo.h">
+      <Filter>Game\DX_BOOK</Filter>
+    </ClInclude>
+    <ClInclude Include="b2.mirrorDemo.h">
+      <Filter>Game\DX_BOOK</Filter>
+    </ClInclude>
+    <ClInclude Include="b3.TessilDemo.h">
+      <Filter>Game\DX_BOOK</Filter>
+    </ClInclude>
+    <ClInclude Include="b4.TessilDemo.h">
+      <Filter>Game\DX_BOOK</Filter>
+    </ClInclude>
+    <ClInclude Include="b5.ShadowDemo.h">
+      <Filter>Game\DX_BOOK</Filter>
+    </ClInclude>
+    <ClInclude Include="b6.TextureBufferDemo.h">
+      <Filter>Game\DX_BOOK</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="ttt.fx">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Shaders\03.worldviewproj.fx">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Shaders\04.TextureBasic.fx">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Shaders\04.Sampler.fx">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Shaders\05.heightmap.fx">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Shaders\06.normalsample.fx">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Shaders\LightHelper.fx">
+      <Filter>Shaders\Common</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Shaders\GlobalHelper.fx">
+      <Filter>Shaders\Common</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Shaders\08.CubeMap.fx">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Shaders\AnimatioHelper.fx">
+      <Filter>Shaders\Common</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Shaders\21.tree.fx">
+      <Filter>Shaders\DXBOOK</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Shaders\b1.Tritessilation.fx">
+      <Filter>Shaders\DXBOOK</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Shaders\b2.Displacement.fx">
+      <Filter>Shaders\DXBOOK</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Shaders\b3.terrain.fx">
+      <Filter>Shaders\DXBOOK</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Shaders\b4.Fire.fx">
+      <Filter>Shaders\DXBOOK</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Shaders\TextureDebug.fx">
+      <Filter>Shaders\DXBOOK</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Shaders\ShadowHelper.fx">
+      <Filter>Shaders\Common</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Shaders\07.Light.fx">
+      <Filter>Shaders\DefualtRenderingShader</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Shaders\15.ModelDemo.fx">
+      <Filter>Shaders\DefualtRenderingShader</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Shaders\16.AnimDemo.fx">
+      <Filter>Shaders\DefualtRenderingShader</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Shaders\10.TextureBufferDemo.fx">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+  </ItemGroup>
+</Project>

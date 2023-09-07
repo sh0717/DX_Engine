@@ -1,0 +1,219 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(517,5): warning MSB8028: 중간 디렉터리(C:\Users\Admin\Desktop\GameEx\Intermediate\Debug\)에 다른 프로젝트(AssimpTool.vcxproj, GameExe.vcxproj)에서 공유하는 파일이 포함되어 있습니다.  이로 인해 잘못된 정리 및 다시 빌드 동작이 수행될 수 있습니다.
+  C:\Users\Admin\Desktop\GameEx\Engine\AABBCollider.h
+  C:\Users\Admin\Desktop\GameEx\Engine\BaseCollider.h
+  C:\Users\Admin\Desktop\GameEx\Engine\Billboard.h
+  C:\Users\Admin\Desktop\GameEx\Engine\BillboardRenderer.h
+  C:\Users\Admin\Desktop\GameEx\Engine\Button.h
+  C:\Users\Admin\Desktop\GameEx\Engine\Camera.h
+  C:\Users\Admin\Desktop\GameEx\Engine\CameraScript.h
+  C:\Users\Admin\Desktop\GameEx\Engine\Component.h
+  C:\Users\Admin\Desktop\GameEx\Engine\ConstantBuffer.h
+  C:\Users\Admin\Desktop\GameEx\Engine\CubeBehavior.h
+  C:\Users\Admin\Desktop\GameEx\Engine\DefaultObject.h
+  C:\Users\Admin\Desktop\GameEx\Engine\Define.h
+  C:\Users\Admin\Desktop\GameEx\Engine\EnginePch.h
+  C:\Users\Admin\Desktop\GameEx\Engine\FileUtils.h
+  C:\Users\Admin\Desktop\GameEx\Engine\framework.h
+  C:\Users\Admin\Desktop\GameEx\Engine\Game.h
+  C:\Users\Admin\Desktop\GameEx\Engine\Geometry.h
+  C:\Users\Admin\Desktop\GameEx\Engine\GeometryHelper.h
+  C:\Users\Admin\Desktop\GameEx\Engine\Graphics.h
+  C:\Users\Admin\Desktop\GameEx\Engine\IExecute.h
+  C:\Users\Admin\Desktop\GameEx\Engine\imconfig.h
+  C:\Users\Admin\Desktop\GameEx\Engine\imgui.h
+  C:\Users\Admin\Desktop\GameEx\Engine\ImGuiManager.h
+  C:\Users\Admin\Desktop\GameEx\Engine\imgui_impl_dx11.h
+  C:\Users\Admin\Desktop\GameEx\Engine\imgui_impl_win32.h
+  C:\Users\Admin\Desktop\GameEx\Engine\imgui_internal.h
+  C:\Users\Admin\Desktop\GameEx\Engine\imstb_rectpack.h
+  C:\Users\Admin\Desktop\GameEx\Engine\imstb_textedit.h
+  C:\Users\Admin\Desktop\GameEx\Engine\imstb_truetype.h
+  C:\Users\Admin\Desktop\GameEx\Engine\IndexBuffer.h
+  C:\Users\Admin\Desktop\GameEx\Engine\InputManager.h
+  C:\Users\Admin\Desktop\GameEx\Engine\InstancingBuffer.h
+  C:\Users\Admin\Desktop\GameEx\Engine\InstancingManager.h
+  C:\Users\Admin\Desktop\GameEx\Engine\Light.h
+  C:\Users\Admin\Desktop\GameEx\Engine\LightHelper.h
+  C:\Users\Admin\Desktop\GameEx\Engine\Material.h
+  C:\Users\Admin\Desktop\GameEx\Engine\MathHelper.h
+  C:\Users\Admin\Desktop\GameEx\Engine\MathUtils.h
+  C:\Users\Admin\Desktop\GameEx\Engine\Mesh.h
+  C:\Users\Admin\Desktop\GameEx\Engine\MeshRenderer.h
+  C:\Users\Admin\Desktop\GameEx\Engine\Model.h
+  C:\Users\Admin\Desktop\GameEx\Engine\ModelAnimator.h
+  C:\Users\Admin\Desktop\GameEx\Engine\ModelRenderer.h
+  C:\Users\Admin\Desktop\GameEx\Engine\MonoBehavior.h
+  C:\Users\Admin\Desktop\GameEx\Engine\OBBCollider.h
+  C:\Users\Admin\Desktop\GameEx\Engine\ParticleSystem.h
+  C:\Users\Admin\Desktop\GameEx\Engine\Pass.h
+  C:\Users\Admin\Desktop\GameEx\Engine\pch.h
+  C:\Users\Admin\Desktop\GameEx\Engine\RenderManager.h
+  C:\Users\Admin\Desktop\GameEx\Engine\RenderStates.h
+  C:\Users\Admin\Desktop\GameEx\Engine\ResourceBase.h
+  C:\Users\Admin\Desktop\GameEx\Engine\ResourceManager.h
+  C:\Users\Admin\Desktop\GameEx\Engine\Scene.h
+  C:\Users\Admin\Desktop\GameEx\Engine\SceneManager.h
+  C:\Users\Admin\Desktop\GameEx\Engine\Shader.h
+  C:\Users\Admin\Desktop\GameEx\Engine\ShadowMap.h
+  C:\Users\Admin\Desktop\GameEx\Engine\SimpleMath.h
+  C:\Users\Admin\Desktop\GameEx\Engine\SphereCollider.h
+  C:\Users\Admin\Desktop\GameEx\Engine\Technique.h
+  C:\Users\Admin\Desktop\GameEx\Engine\Terrain.h
+  C:\Users\Admin\Desktop\GameEx\Engine\Texture.h
+  C:\Users\Admin\Desktop\GameEx\Engine\TextureBuffer.h
+  C:\Users\Admin\Desktop\GameEx\Engine\TimeManager.h
+  C:\Users\Admin\Desktop\GameEx\Engine\tinyxml2.h
+  C:\Users\Admin\Desktop\GameEx\Engine\Transform.h
+  C:\Users\Admin\Desktop\GameEx\Engine\Types.h
+  C:\Users\Admin\Desktop\GameEx\Engine\Utils.h
+  C:\Users\Admin\Desktop\GameEx\Engine\VertexBuffer.h
+  C:\Users\Admin\Desktop\GameEx\Engine\VertexData.h
+  C:\Users\Admin\Desktop\GameEx\Engine\Wave.h
+  70개 파일이 복사되었습니다.
+  C:\Users\Admin\Desktop\GameEx\Engine\SimpleMath.inl
+  1개 파일이 복사되었습니다.
+  pch.cpp
+C:\Users\Admin\Desktop\GameEx\Engine\ResourceBase.h(5,2): warning C4309: '초기화 중': 상수 값이 잘립니다.
+C:\Users\Admin\Desktop\GameEx\Engine\ResourceBase.h(5,2): warning C4369: 'RESOURCE_TYPE::NONE':  열거자 값 '-1'을(를) 'unsigned char'(으)로 나타낼 수 없습니다. 값은 '-1'입니다.
+C:\Users\Admin\Desktop\GameEx\Engine\ResourceBase.h(6,2): warning C4340: 'MESH': 양의 값에서 음의 값으로 값이 래핑되었습니다.
+C:\Users\Admin\Desktop\GameEx\Engine\ResourceBase.h(6,2): warning C4309: '초기화 중': 상수 값이 잘립니다.
+C:\Users\Admin\Desktop\GameEx\Engine\ResourceBase.h(6,2): warning C4369: 'RESOURCE_TYPE::MESH':  열거자 값 '256'을(를) 'unsigned char'(으)로 나타낼 수 없습니다. 값은 '256'입니다.
+C:\Users\Admin\Desktop\GameEx\Engine\MeshRenderer.h(30,32): warning C4244: '=': 'uint16'에서 'uint8'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\Admin\Desktop\GameEx\Engine\MeshRenderer.h(31,33): warning C4244: '=': 'uint16'에서 'uint8'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\Admin\Desktop\GameEx\Engine\ModelRenderer.h(31,32): warning C4244: '=': 'uint16'에서 'uint8'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\Admin\Desktop\GameEx\Engine\ModelRenderer.h(32,33): warning C4244: '=': 'uint16'에서 'uint8'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\Admin\Desktop\GameEx\Engine\ModelAnimator.h(41,32): warning C4244: '=': 'uint16'에서 'uint8'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\Admin\Desktop\GameEx\Engine\ModelAnimator.h(42,33): warning C4244: '=': 'uint16'에서 'uint8'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  AABBCollider.cpp
+  BaseCollider.cpp
+  BillboardRenderer.cpp
+  Button.cpp
+C:\Users\Admin\Desktop\GameEx\Engine\Button.cpp(45,27): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\Admin\Desktop\GameEx\Engine\Button.cpp(46,28): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\Admin\Desktop\GameEx\Engine\Button.cpp(47,26): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\Admin\Desktop\GameEx\Engine\Button.cpp(48,29): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Camera.cpp
+  CameraScript.cpp
+  Component.cpp
+  ConstantBuffer.cpp
+  CubeBehavior.cpp
+  DefaultObject.cpp
+  FileUtils.cpp
+  Game.cpp
+C:\Users\Admin\Desktop\GameEx\Engine\Game.cpp(75,33): warning C4838: 'float'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+C:\Users\Admin\Desktop\GameEx\Engine\Game.cpp(75,33): warning C4244: '초기화 중': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\Admin\Desktop\GameEx\Engine\Game.cpp(75,46): warning C4838: 'float'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+C:\Users\Admin\Desktop\GameEx\Engine\Game.cpp(75,46): warning C4244: '초기화 중': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Geometry.cpp
+  GeometryHelper.cpp
+C:\Users\Admin\Desktop\GameEx\Engine\GeometryHelper.cpp(423,36): warning C4267: '초기화 중': 'size_t'에서 'uint32'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Graphics.cpp
+C:\Users\Admin\Desktop\GameEx\Engine\Graphics.cpp(85,46): warning C4244: '=': 'float'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\Admin\Desktop\GameEx\Engine\Graphics.cpp(86,47): warning C4244: '=': 'float'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  IExecute.cpp
+  ImGuiManager.cpp
+  IndexBuffer.cpp
+  InputManager.cpp
+  InstancingBuffer.cpp
+  코드를 생성하고 있습니다...
+C:\Users\Admin\Desktop\GameEx\Engine\Game.cpp(110): warning C4715: 'Game::WndProc': 모든 제어 경로에서 값을 반환하지는 않습니다.
+  컴파일하고 있습니다...
+  InstancingManager.cpp
+C:\Users\Admin\Desktop\GameEx\Engine\InstancingManager.cpp(85,21): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\Admin\Desktop\GameEx\Engine\InstancingManager.cpp(128,21): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Light.cpp
+  LightHelper.cpp
+  Material.cpp
+  MathHelper.cpp
+  MathUtils.cpp
+  Mesh.cpp
+  MeshRenderer.cpp
+  Model.cpp
+  ModelAnimator.cpp
+C:\Users\Admin\Desktop\GameEx\Engine\ModelAnimator.cpp(213,7): warning C4101: 'a' :참조되지 않은 지역 변수입니다.
+C:\Users\Admin\Desktop\GameEx\Engine\ModelAnimator.cpp(217,7): warning C4101: 'depthstencilNum' :참조되지 않은 지역 변수입니다.
+  ModelRenderer.cpp
+  MonoBehavior.cpp
+  OBBCollider.cpp
+  ParticleSystem.cpp
+  Pass.cpp
+  RenderStates.cpp
+  ResourceBase.cpp
+  ResourceManager.cpp
+  Scene.cpp
+  SceneManager.cpp
+  코드를 생성하고 있습니다...
+  컴파일하고 있습니다...
+  Shader.cpp
+C:\Users\Admin\Desktop\GameEx\Engine\Shader.cpp(166,3): warning C4267: '인수': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  ShadowMap.cpp
+  SimpleMath.cpp
+  SphereCollider.cpp
+  Technique.cpp
+  Terrain.cpp
+  Texture.cpp
+C:\Users\Admin\Desktop\GameEx\Engine\Texture.cpp(42,16): warning C4244: '=': 'size_t'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\Admin\Desktop\GameEx\Engine\Texture.cpp(43,16): warning C4244: '=': 'size_t'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\Admin\Desktop\GameEx\Engine\Texture.cpp(70,16): warning C4244: '=': 'size_t'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\Admin\Desktop\GameEx\Engine\Texture.cpp(71,16): warning C4244: '=': 'size_t'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  TextureBuffer.cpp
+  TimeManager.cpp
+  Transform.cpp
+C:\Users\Admin\Desktop\GameEx\Engine\Transform.cpp(31,23): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\Admin\Desktop\GameEx\Engine\Transform.cpp(36,40): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\Admin\Desktop\GameEx\Engine\Transform.cpp(41,23): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Utils.cpp
+C:\Users\Admin\Desktop\GameEx\Engine\Utils.cpp(64,32): warning C4267: '초기화 중': 'size_t'에서 'uint32'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xstring(2859,53): warning C4244: '인수': 'wchar_t'에서 'const _Elem'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Elem=char
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xstring(2718,1): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct_from_iter<wchar_t*,wchar_t*,_Size_type>(_Iter,const _Sent,_Size)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Size_type=unsigned __int64,
+              _Iter=wchar_t *,
+              _Sent=wchar_t *,
+              _Size=unsigned __int64
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xstring(2718,37): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct_from_iter<wchar_t*,wchar_t*,_Size_type>(_Iter,const _Sent,_Size)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Size_type=unsigned __int64,
+              _Iter=wchar_t *,
+              _Sent=wchar_t *,
+              _Size=unsigned __int64
+          ]
+C:\Users\Admin\Desktop\GameEx\Engine\Utils.cpp(29): message : 컴파일되는 함수 템플릿 인스턴스화 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Elem=wchar_t,
+              _Iter=std::_String_iterator<std::_String_val<std::_Simple_types<wchar_t>>>,
+              _Alloc=std::allocator<char>
+          ]
+C:\Users\Admin\Desktop\GameEx\Engine\Utils.cpp(29,2): message : 컴파일되는 함수 템플릿 인스턴스화 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Elem=wchar_t,
+              _Iter=std::_String_iterator<std::_String_val<std::_Simple_types<wchar_t>>>,
+              _Alloc=std::allocator<char>
+          ]
+  VertexBuffer.cpp
+  VertexData.cpp
+  Wave.cpp
+C:\Users\Admin\Desktop\GameEx\Engine\Wave.cpp(60,19): warning C4244: '+=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\Admin\Desktop\GameEx\Engine\Wave.cpp(61,19): warning C4244: '+=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\Admin\Desktop\GameEx\Engine\Wave.cpp(73,11): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\Admin\Desktop\GameEx\Engine\Wave.cpp(162,15): warning C4552: '+': 식의 결과가 사용되지 않습니다.
+  코드를 생성하고 있습니다...
+  imgui.cpp
+  imgui_demo.cpp
+  imgui_draw.cpp
+  imgui_impl_dx11.cpp
+  imgui_impl_win32.cpp
+  imgui_tables.cpp
+  imgui_widgets.cpp
+  tinyxml2.cpp
+  코드를 생성하고 있습니다...
+  Engine.vcxproj -> C:\Users\Admin\Desktop\GameEx\Library\Lib\Engine\Engine.lib

@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="02.CameraDemo.cpp" />
+    <ClCompile Include="04.SamplerDemo.cpp" />
+    <ClCompile Include="05.ColorBoxDemo.cpp" />
+    <ClCompile Include="06.HeightMapDemo.cpp" />
+    <ClCompile Include="07.NormalTestDemo.cpp" />
+    <ClCompile Include="08.LightDemo.cpp" />
+    <ClCompile Include="09.ModelInitDemo.cpp" />
+    <ClCompile Include="10.AnimDemo.cpp" />
+    <ClCompile Include="11.InstancingDemo.cpp" />
+    <ClCompile Include="12.PickingDemo.cpp" />
+    <ClCompile Include="b1.TextureLightDemo.cpp" />
+    <ClCompile Include="b2.mirrorDemo.cpp" />
+    <ClCompile Include="b3.TessilDemo.cpp" />
+    <ClCompile Include="b4.TessilDemo.cpp" />
+    <ClCompile Include="b5.ShadowDemo.cpp" />
+    <ClCompile Include="b6.TextureBufferDemo.cpp" />
+    <ClCompile Include="kkk.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="03.TextureDemo.cpp" />
+    <ClCompile Include="TriangleDemo.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="02.CameraDemo.h" />
+    <ClInclude Include="04.SamplerDemo.h" />
+    <ClInclude Include="05.ColorBoxDemo.h" />
+    <ClInclude Include="06.HeightMapDemo.h" />
+    <ClInclude Include="07.NormalTestDemo.h" />
+    <ClInclude Include="08.LightDemo.h" />
+    <ClInclude Include="09.ModelInitDemo.h" />
+    <ClInclude Include="10.AnimDemo.h" />
+    <ClInclude Include="11.InstancingDemo.h" />
+    <ClInclude Include="12.PickingDemo.h" />
+    <ClInclude Include="b1.TextureLightDemo.h" />
+    <ClInclude Include="b2.mirrorDemo.h" />
+    <ClInclude Include="b3.TessilDemo.h" />
+    <ClInclude Include="b4.TessilDemo.h" />
+    <ClInclude Include="b5.ShadowDemo.h" />
+    <ClInclude Include="b6.TextureBufferDemo.h" />
+    <ClInclude Include="kkk.h" />
+    <ClInclude Include="main.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="03.TextureDemo.h" />
+    <ClInclude Include="TriangleDemo.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="..\Shaders\03.worldviewproj.fx" />
+    <FxCompile Include="..\Shaders\04.Sampler.fx" />
+    <FxCompile Include="..\Shaders\04.TextureBasic.fx" />
+    <FxCompile Include="..\Shaders\05.heightmap.fx" />
+    <FxCompile Include="..\Shaders\06.normalsample.fx" />
+    <FxCompile Include="..\Shaders\07.Light.fx" />
+    <FxCompile Include="..\Shaders\08.CubeMap.fx" />
+    <FxCompile Include="..\Shaders\10.TextureBufferDemo.fx" />
+    <FxCompile Include="..\Shaders\15.ModelDemo.fx" />
+    <FxCompile Include="..\Shaders\16.AnimDemo.fx" />
+    <FxCompile Include="..\Shaders\21.tree.fx" />
+    <FxCompile Include="..\Shaders\AnimatioHelper.fx" />
+    <FxCompile Include="..\Shaders\b1.Tritessilation.fx" />
+    <FxCompile Include="..\Shaders\b2.Displacement.fx" />
+    <FxCompile Include="..\Shaders\b3.terrain.fx" />
+    <FxCompile Include="..\Shaders\b4.Fire.fx" />
+    <FxCompile Include="..\Shaders\GlobalHelper.fx" />
+    <FxCompile Include="..\Shaders\LightHelper.fx" />
+    <FxCompile Include="..\Shaders\ShadowHelper.fx" />
+    <FxCompile Include="..\Shaders\TextureDebug.fx" />
+    <FxCompile Include="ttt.fx">
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">VS</EntryPointName>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">5.0</ShaderModel>
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">VS</EntryPointName>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">5.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Effect</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Effect</ShaderType>
+    </FxCompile>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{8f496dfc-22fd-4854-b977-802376d3728a}</ProjectGuid>
+    <RootNamespace>GameExe</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)Binary\</OutDir>
+    <IntDir>$(SolutionDir)Intermediate\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)Binary\</OutDir>
+    <IntDir>$(SolutionDir)Intermediate\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Library\Include\;$(SolutionDir)Library\Include\Engine\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)Library\Lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <FxCompile>
+      <EntryPointName>VS</EntryPointName>
+    </FxCompile>
+    <FxCompile>
+      <ShaderType>Effect</ShaderType>
+    </FxCompile>
+    <FxCompile>
+      <ShaderModel>5.0</ShaderModel>
+    </FxCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Library\Include\;$(SolutionDir)Library\Include\Engine\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)Library\Lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <FxCompile>
+      <EntryPointName>VS</EntryPointName>
+    </FxCompile>
+    <FxCompile>
+      <ShaderType>Effect</ShaderType>
+    </FxCompile>
+    <FxCompile>
+      <ShaderModel>5.0</ShaderModel>
+    </FxCompile>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,68 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(517,5): warning MSB8028: 중간 디렉터리(C:\Users\Admin\Desktop\GameEx\Intermediate\Debug\)에 다른 프로젝트(AssimpTool.vcxproj, Engine.vcxproj)에서 공유하는 파일이 포함되어 있습니다.  이로 인해 잘못된 정리 및 다시 빌드 동작이 수행될 수 있습니다.
+FXC : warning X4717: Effects deprecated for D3DCompiler_47
+C:\Users\Admin\Desktop\GameEx\Shaders\16.AnimDemo.fx(47,12-67): warning X3206: implicit truncation of vector type
+C:\Users\Admin\Desktop\GameEx\Shaders\LightHelper.fx(274,5): warning X4000: use of potentially uninitialized variable (IsNormalMap)
+C:\Users\Admin\Desktop\GameEx\Shaders\LightHelper.fx(298,5): warning X4000: use of potentially uninitialized variable (NormalMapExtract)
+  
+  compilation object save succeeded; see C:\Users\Admin\Desktop\GameEx\Binary\16.AnimDemo.cso
+  pch.cpp
+C:\Users\Admin\Desktop\GameEx\Engine\ResourceBase.h(5,2): warning C4309: '초기화 중': 상수 값이 잘립니다.
+C:\Users\Admin\Desktop\GameEx\Engine\ResourceBase.h(5,2): warning C4369: 'RESOURCE_TYPE::NONE':  열거자 값 '-1'을(를) 'unsigned char'(으)로 나타낼 수 없습니다. 값은 '-1'입니다.
+C:\Users\Admin\Desktop\GameEx\Engine\ResourceBase.h(6,2): warning C4340: 'MESH': 양의 값에서 음의 값으로 값이 래핑되었습니다.
+C:\Users\Admin\Desktop\GameEx\Engine\ResourceBase.h(6,2): warning C4309: '초기화 중': 상수 값이 잘립니다.
+C:\Users\Admin\Desktop\GameEx\Engine\ResourceBase.h(6,2): warning C4369: 'RESOURCE_TYPE::MESH':  열거자 값 '256'을(를) 'unsigned char'(으)로 나타낼 수 없습니다. 값은 '256'입니다.
+C:\Users\Admin\Desktop\GameEx\Engine\MeshRenderer.h(30,32): warning C4244: '=': 'uint16'에서 'uint8'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\Admin\Desktop\GameEx\Engine\MeshRenderer.h(31,33): warning C4244: '=': 'uint16'에서 'uint8'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\Admin\Desktop\GameEx\Engine\ModelRenderer.h(31,32): warning C4244: '=': 'uint16'에서 'uint8'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\Admin\Desktop\GameEx\Engine\ModelRenderer.h(32,33): warning C4244: '=': 'uint16'에서 'uint8'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\Admin\Desktop\GameEx\Engine\ModelAnimator.h(41,32): warning C4244: '=': 'uint16'에서 'uint8'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\Admin\Desktop\GameEx\Engine\ModelAnimator.h(42,33): warning C4244: '=': 'uint16'에서 'uint8'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  02.CameraDemo.cpp
+  03.TextureDemo.cpp
+  04.SamplerDemo.cpp
+  05.ColorBoxDemo.cpp
+C:\Users\Admin\Desktop\GameEx\GameExe\05.ColorBoxDemo.cpp(22,2): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+  06.HeightMapDemo.cpp
+  07.NormalTestDemo.cpp
+  08.LightDemo.cpp
+  09.ModelInitDemo.cpp
+  10.AnimDemo.cpp
+  11.InstancingDemo.cpp
+C:\Users\Admin\Desktop\GameEx\GameExe\11.InstancingDemo.cpp(45,69): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\Admin\Desktop\GameEx\GameExe\11.InstancingDemo.cpp(45,52): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\Admin\Desktop\GameEx\GameExe\11.InstancingDemo.cpp(62,72): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\Admin\Desktop\GameEx\GameExe\11.InstancingDemo.cpp(62,53): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\Admin\Desktop\GameEx\GameExe\11.InstancingDemo.cpp(220,75): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\Admin\Desktop\GameEx\GameExe\11.InstancingDemo.cpp(220,57): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  12.PickingDemo.cpp
+C:\Users\Admin\Desktop\GameEx\GameExe\12.PickingDemo.cpp(205,75): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\Admin\Desktop\GameEx\GameExe\12.PickingDemo.cpp(205,57): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  TriangleDemo.cpp
+  b1.TextureLightDemo.cpp
+C:\Users\Admin\Desktop\GameEx\GameExe\b1.TextureLightDemo.cpp(9,57): warning C4244: 'return': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\Admin\Desktop\GameEx\GameExe\b1.TextureLightDemo.cpp(333,75): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\Admin\Desktop\GameEx\GameExe\b1.TextureLightDemo.cpp(333,57): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  b2.mirrorDemo.cpp
+C:\Users\Admin\Desktop\GameEx\GameExe\b2.mirrorDemo.cpp(417,75): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\Admin\Desktop\GameEx\GameExe\b2.mirrorDemo.cpp(417,57): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  b3.TessilDemo.cpp
+  b4.TessilDemo.cpp
+C:\Users\Admin\Desktop\GameEx\GameExe\b4.TessilDemo.cpp(222,91): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+  b5.ShadowDemo.cpp
+  b6.TextureBufferDemo.cpp
+  kkk.cpp
+  main.cpp
+  코드를 생성하고 있습니다...
+DirectXTex_debug.lib(DirectXTexImage.obj) : warning LNK4099: '' PDB를 'DirectXTex_debug.lib(DirectXTexImage.obj)' 또는 ''에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+DirectXTex_debug.lib(DirectXTexDDS.obj) : warning LNK4099: '' PDB를 'DirectXTex_debug.lib(DirectXTexDDS.obj)' 또는 ''에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+DirectXTex_debug.lib(DirectXTexTGA.obj) : warning LNK4099: '' PDB를 'DirectXTex_debug.lib(DirectXTexTGA.obj)' 또는 ''에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+DirectXTex_debug.lib(DirectXTexWIC.obj) : warning LNK4099: '' PDB를 'DirectXTex_debug.lib(DirectXTexWIC.obj)' 또는 ''에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+DirectXTex_debug.lib(DirectXTexD3D11.obj) : warning LNK4099: '' PDB를 'DirectXTex_debug.lib(DirectXTexD3D11.obj)' 또는 ''에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+DirectXTex_debug.lib(DirectXTexUtil.obj) : warning LNK4099: '' PDB를 'DirectXTex_debug.lib(DirectXTexUtil.obj)' 또는 ''에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+DirectXTex_debug.lib(DirectXTexConvert.obj) : warning LNK4099: '' PDB를 'DirectXTex_debug.lib(DirectXTexConvert.obj)' 또는 ''에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+DirectXTex_debug.lib(DirectXTexMipMaps.obj) : warning LNK4099: '' PDB를 'DirectXTex_debug.lib(DirectXTexMipMaps.obj)' 또는 ''에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+DirectXTex_debug.lib(DirectXTexCompress.obj) : warning LNK4099: '' PDB를 'DirectXTex_debug.lib(DirectXTexCompress.obj)' 또는 ''에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+DirectXTex_debug.lib(BC.obj) : warning LNK4099: '' PDB를 'DirectXTex_debug.lib(BC.obj)' 또는 ''에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+DirectXTex_debug.lib(BC4BC5.obj) : warning LNK4099: '' PDB를 'DirectXTex_debug.lib(BC4BC5.obj)' 또는 ''에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+DirectXTex_debug.lib(BC6HBC7.obj) : warning LNK4099: '' PDB를 'DirectXTex_debug.lib(BC6HBC7.obj)' 또는 ''에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+  GameExe.vcxproj -> C:\Users\Admin\Desktop\GameEx\Binary\GameExe.exe
