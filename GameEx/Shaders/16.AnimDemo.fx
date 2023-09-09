@@ -74,8 +74,12 @@ float4 PS(MeshOutput input) : SV_TARGET
     
   
     float4 color = DiffuseMap.Sample(LinearSampler, input.uv);
+    if(ExistTexture(color) == false)
+    {
+        color = float4(1.f, 1.f, 1.f, 1.f);
+    }
     
-    
+   
     
     float4 result;
     result.xyz = color.xyz * (totalA + totalD + totalS).xyz;

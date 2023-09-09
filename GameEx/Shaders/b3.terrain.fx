@@ -1,5 +1,6 @@
 #include "GlobalHelper.fx"
 #include "LightHelper.fx"
+#include "ShadowHelper.fx"
 
 Texture2D gHeightMap;
 SamplerState samHeightmap
@@ -24,7 +25,7 @@ cbuffer cbPerFrame
 	// When distance is minimum, the tessellation is maximum.
 	// When distance is maximum, the tessellation is minimum.
     float gMinDist=0.1;
-    float gMaxDist=100;
+    float gMaxDist=50;
 
 	// Exponents for power of 2 tessellation.  The tessellation
 	// range is [2^(gMinTess), 2^(gMaxTess)].  Since the maximum
@@ -88,7 +89,7 @@ struct PatchTess
 
 float CalcTessFactor(float3 p)
 {
-    float d = distance(p, gEyePosW);
+    float d = distance(p, CameraPos);
 
 	// max norm in xz plane (useful to see detail levels from a bird's eye).
 	//float d = max( abs(p.x-gEyePosW.x), abs(p.z-gEyePosW.z) );
@@ -199,6 +200,7 @@ struct HullOut
 {
     float3 PosW : POSITIONT;
     float2 Tex : TEXCOORD0;
+    
 };
 
 
@@ -228,7 +230,7 @@ struct DomainOut
     float4 PosH : SV_POSITION;
     float3 PosW : POSITIONT;
     float2 Tex : TEXCOORD0;
-    
+    float4 ShadowPosH : TEXCOORD1;
 };
 
 
@@ -263,17 +265,19 @@ DomainOut DS(PatchTess patchTess,
 
 	// Project to homogeneous clip space.
     dout.PosH = mul(float4(dout.PosW, 1.0f), ViewProj);
+    dout.ShadowPosH = mul(float4(dout.PosW, 1.f), shadowtransform);
 
     return dout;
 }
 
 float4 PS(DomainOut pin):SV_Target
 {
-    float4 c0 = DiffuseMapArray.Sample(LinearSampler, float3(pin.Tex, 0.0f));
-    float4 c1 = DiffuseMapArray.Sample(LinearSampler, float3(pin.Tex, 1.0f));
-    float4 c2 = DiffuseMapArray.Sample(LinearSampler, float3(pin.Tex, 2.0f));
-    float4 c3 = DiffuseMapArray.Sample(LinearSampler, float3(pin.Tex, 3.0f));
-    float4 c4 = DiffuseMapArray.Sample(LinearSampler, float3(pin.Tex, 4.0f));
+   float2 TiledTex= pin.Tex*gTexScale;
+    float4 c0 = DiffuseMapArray.Sample(LinearSampler, float3(TiledTex, 0.0f));
+    float4 c1 = DiffuseMapArray.Sample(LinearSampler, float3(TiledTex, 1.0f));
+    float4 c2 = DiffuseMapArray.Sample(LinearSampler, float3(TiledTex, 2.0f));
+    float4 c3 = DiffuseMapArray.Sample(LinearSampler, float3(TiledTex, 3.0f));
+    float4 c4 = DiffuseMapArray.Sample(LinearSampler, float3(TiledTex, 4.0f));
     
     float4 t = BlendMap.Sample(LinearSampler, pin.Tex);
     float4 texColor = c0;
@@ -282,7 +286,10 @@ float4 PS(DomainOut pin):SV_Target
     texColor = lerp(texColor, c3, t.b);
     texColor = lerp(texColor, c4, t.a);
     
-    return texColor;
+    float3 shadow = float3(1.0f, 1.0f, 1.0f);
+    shadow[0] = CalcShadowFactor(samShadow, ShadowMap, pin.ShadowPosH);
+    
+    return texColor*shadow[0];
 }
 
 

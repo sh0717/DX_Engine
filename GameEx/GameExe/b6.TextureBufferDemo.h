@@ -9,7 +9,7 @@ public:
 	void Render() override;
 	
 	
-	ComPtr<ID3D11ShaderResourceView> MakeComputeShaderTexture();
+	ComPtr<ID3D11ShaderResourceView> MakeComputeShaderTexture(UINT tech , UINT pass);
 private:
 
 

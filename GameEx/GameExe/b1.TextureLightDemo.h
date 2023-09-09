@@ -28,8 +28,9 @@ private:
 	shared_ptr<DefaultObject> cubeObj;
 	shared_ptr<Shader> modelAnimShader;
 	shared_ptr<Shader> lightShader;
-	shared_ptr<Shader> waterlightShader;
 	shared_ptr<Shader> modelShader;
+	shared_ptr<Shader> waterlightShader;
+	
 	shared_ptr<Shader> treeShader;
 
 

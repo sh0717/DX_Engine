@@ -1,5 +1,11 @@
 #pragma once
 #include "Component.h"
+enum eTransformMode {
+
+	Moving=0,
+	Idle =1
+
+};
 
 class Transform : public Component
 {
@@ -12,11 +18,14 @@ public:
 
 	void UpdateTransform();
 
+
+	static Vec3 ToEulerAngles(Quaternion q);
 	///for Camera
 	virtual void Walk(float d) {}
 	virtual void Strafe(float d) {}
 	virtual void Pitch(float angle) {}
 	virtual void RotateY(float angle) {}
+	virtual void ChangeHeight(float y) {}
 
 
 	// Local
@@ -55,7 +64,7 @@ public:
 	void AddChild(shared_ptr<Transform> child) { _children.push_back(child); }
 
 
-
+	eTransformMode mode = Idle;
 
 protected:
 	Vec3 _localScale = { 1.f, 1.f, 1.f };
@@ -92,7 +101,7 @@ public:
 	virtual void Strafe(float d);
 	virtual void Pitch(float angle);
 	virtual void RotateY(float angle);
-
+	virtual void ChangeHeight(float y);
 	virtual Vec3 GetPosition() { return _position; }
 	virtual Vec3 GetRight() { return _right; }
 	virtual Vec3 GetUp() { return _up; }

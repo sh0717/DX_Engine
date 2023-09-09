@@ -249,7 +249,7 @@ void ShadowDemo::Init()
 
 		shared_ptr<Geometry<VertexFull>> geo_cylinder = make_shared<Geometry<VertexFull>>();
 
-		GeometryHelper::CreateGrid(geo_cylinder, 30,30,100,100,10,10);
+		GeometryHelper::CreateGrid(geo_cylinder, 50,50,100,100,10,10);
 		mesh->SetGeometry(geo_cylinder);
 
 		obj->GetMeshRenderer()->SetMesh(mesh);
@@ -266,8 +266,11 @@ void ShadowDemo::Init()
 	{
 		auto obj = make_shared<DefaultObject>(DEVICE, CONTEXT);
 		obj->GetOrAddTransform()->SetPosition(Vec3(0.f,2.f,0.f));
+		//obj->GetOrAddTransform()->SetScale(Vec3(0.01f));
 		obj->AddComponent(make_shared<ModelRenderer>(modelShader));
+		
 		obj->GetModelRenderer()->SetModel(tankModel);
+		obj->GetModelRenderer()->SetPass(1);
 		//.push_back(obj);
 		SCENE->GetCurrentScene()->Add(obj);
 	}
@@ -309,7 +312,33 @@ void ShadowDemo::Init()
 
 
 	//}
-	
+	//car
+	{
+		shared_ptr<class Model> m1 = make_shared<Model>();
+		m1->ReadModel(L"Car/car");
+		m1->ReadMaterial(L"Car/car");
+
+
+		for (int i = 0; i < 10; i++) {
+
+			auto _obj = make_shared<DefaultObject>(DEVICE, CONTEXT);
+			
+			_obj->GetOrAddTransform()->SetPosition(Vec3(-13.f,0.f,-9+i*4.f));
+			_obj->GetOrAddTransform()->SetScale(Vec3(0.01f));
+
+			_obj->AddComponent(make_shared<ModelRenderer>(modelShader));
+			{
+				_obj->GetModelRenderer()->SetModel(m1);
+				_obj->GetModelRenderer()->SetPass(1);
+				_obj->GetModelRenderer()->SetDiffID();
+				//_obj->GetModelAnimator()->SetPass(1);
+			}
+			
+
+			SCENE->GetCurrentScene()->Add(_obj);
+
+		}
+	}
 
 
 	DirectionalLight lightDesc;
@@ -360,7 +389,7 @@ void ShadowDemo::Init()
 	}
 
 	
-	 
+	
 
 	SCENE->GetCurrentScene()->Start();
 }

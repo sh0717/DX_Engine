@@ -12,6 +12,7 @@ public:
 
 	POINT mPos = {0,0};
 
+	int mode = 1;
 
 };
 

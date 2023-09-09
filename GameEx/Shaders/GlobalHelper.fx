@@ -176,4 +176,18 @@ float3 GetCameraPosition()
 {
     return -View._41_42_43;
 }
+
+bool ExistTexture(float4 color)
+{
+    
+    if(color.r == 0.f && color.g == 0.f && color.b == 0.f &&color.a ==0.f)
+    {
+        return false;
+    }
+    else
+    {
+        return true;
+    }
+
+}
 #endif

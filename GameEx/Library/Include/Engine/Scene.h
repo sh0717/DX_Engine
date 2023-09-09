@@ -17,6 +17,7 @@ public:
 
 	virtual vector<shared_ptr<DefaultObject>>& GetLights() { return mLights; }
 	virtual vector<shared_ptr<DefaultObject>>& GetObjects() { return mObjects; }
+	virtual vector<shared_ptr<DefaultObject>>& GetTerrain() { return mTerrain; }
 
 	
 
@@ -34,7 +35,7 @@ private:
 	// Cache Light
 	vector<shared_ptr<DefaultObject>> mLights;
 
-
+	vector<shared_ptr<DefaultObject>> mTerrain;
 	
 
 };

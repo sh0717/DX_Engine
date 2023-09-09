@@ -5,9 +5,12 @@ class MonoBehavior : public Component
 
 public:
 	MonoBehavior();
-	~MonoBehavior();
+	virtual ~MonoBehavior();
 
 	virtual void Init() override;
 	virtual void Update() override;
 };
+
+
+
 

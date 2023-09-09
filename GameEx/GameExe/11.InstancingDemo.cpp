@@ -231,4 +231,34 @@ void InstancingDemo::CreateKachujin()
 		SCENE->GetCurrentScene()->Add(_obj);
 		
 	}
+
+
+
+
+	shared_ptr<class Model> m2 = make_shared<Model>();
+	m2->ReadModel(L"Wolf/Wolf");
+	m2->ReadMaterial(L"Wolf/Wolf");
+	m2->ReadAnimation(L"Wolf/Anim_0");
+	m2->ReadAnimation(L"Wolf/Anim_1");
+	m2->ReadAnimation(L"Wolf/Anim_2");
+	//m2->ReadAnimation(L"Wolf/Anim_3");
+	
+
+	for (int i = 0; i < 500; i++) {
+
+		auto _obj = make_shared<DefaultObject>(DEVICE, CONTEXT);
+		
+		_obj->GetOrAddTransform()->SetPosition(Vec3(Vec3(rand() % 100 - 50, 0, rand() % 100 - 50)));
+		_obj->GetOrAddTransform()->SetScale(Vec3(0.01f));
+
+		_obj->AddComponent(make_shared<ModelAnimator>(modelShader));
+		{
+			_obj->GetModelAnimator()->SetModel(m2);
+			//_obj->GetModelAnimator()->SetPass(1);
+		}
+		//_obj->AddComponent(make_shared<SphereCollider>());
+
+		SCENE->GetCurrentScene()->Add(_obj);
+
+	}
 }

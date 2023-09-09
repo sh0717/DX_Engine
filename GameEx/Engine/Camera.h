@@ -8,7 +8,8 @@ enum class eProjectionType {
 enum class eCameraType {
 
 	Default,
-	UI
+	UI,
+	Particle
 
 };
 

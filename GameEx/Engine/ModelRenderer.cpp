@@ -117,6 +117,22 @@ void ModelRenderer::RenderInstancing(shared_ptr<InstancingBuffer>& buffer)
 
 
 
+
+	//about shadow
+	ShadowDesc shadow_desc;
+	if (SCENE->GetCurrentScene()->GetLights().size() > 0) {
+		shadow_desc.shadowtransform = SCENE->GetCurrentScene()->GetLights()[0]->GetLight()->GetShadowTransform();
+	}
+
+	myShader->PushShadowBuffer(shadow_desc);
+	if (SCENE->GetCurrentScene()->GetLights().size() > 0) {
+		myShader->GetSRV("ShadowMap")->SetResource(SCENE->GetCurrentScene()->GetLights()[0]->GetLight()->GetShadowMap()->GetDepthMapSRV().Get());
+	}
+
+	//////
+
+
+
 		///States::
 	float blendFactor[4] = { 0,0,0,0 };
 

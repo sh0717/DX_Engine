@@ -201,7 +201,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	AnimDemoDesc.app = make_shared<AnimDemo>();
 
 	GameDesc InstancingDemoDesc;
-	InstancingDemoDesc.appName = L"sexee";
+	InstancingDemoDesc.appName = L"123";
 	InstancingDemoDesc.hInstance = hInstance;
 	InstancingDemoDesc.vsync = false;
 	InstancingDemoDesc.hWnd = NULL;
@@ -213,7 +213,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
 
 	GameDesc PickDemo;
-	PickDemo.appName = L"sexee";
+	PickDemo.appName = L"123";
 	PickDemo.hInstance = hInstance;
 	PickDemo.vsync = false;
 	PickDemo.hWnd = NULL;
@@ -246,7 +246,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
 	//GAME->Run(AnimDemoDesc);
 
-	GAME->Run(InstancingDemoDesc);
+	//GAME->Run(InstancingDemoDesc);
 
 
 
@@ -259,6 +259,6 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	//GAME->Run(b3tessildesc);
 	//GAME->Run(b4tessildesc);
 	//GAME->Run(b5Shadowdesc);
-	//GAME->Run(b6Texturedesc);
+	GAME->Run(b6Texturedesc);
 	return 0;
 }

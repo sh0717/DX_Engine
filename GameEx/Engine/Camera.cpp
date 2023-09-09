@@ -121,9 +121,11 @@ void Camera::SortGameObject()
 			eColliderType type = obj->GetCollider()->GetColliderType();
 
 			if (type == eColliderType::Sphere) {
-			
+				
+				
 				shared_ptr<SphereCollider> sphere = static_pointer_cast<SphereCollider>(obj->GetCollider());
-				if (WorldFrustum.Contains(sphere->GetBoundingSphere()) == false) {
+				if (WorldFrustum.Contains(sphere->GetBoundingSphere()) == false&& WorldFrustum.Intersects(sphere->GetBoundingSphere())==false) {
+					num++;
 					continue;
 				}
 			}
@@ -145,11 +147,8 @@ void Camera::SortGameObject()
 
 		mObjectVector.push_back(obj);
 	}
-	//WCHAR text[100] = L"";
-	//::wsprintf(text, L"CULLING: %d", num);
-	//::SetWindowText(GAME->GetGameDesc().hWnd, text);
+	
 
-	/////
 
 	
 }
@@ -184,7 +183,7 @@ void Camera::RenderForward()
 
 
 	
-	//int the mObjectvector the set of obect to draw is included 
+	//int the mObjectvector the set of object to draw is included 
 	INSTANCING->Render(mObjectVector);
 
 

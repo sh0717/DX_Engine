@@ -16,7 +16,10 @@
 
 void TexutreBufferDemo::Init()
 {
-	auto changed_SRV = MakeComputeShaderTexture();
+	auto changed_SRV = MakeComputeShaderTexture(0,0);
+	auto changed_SRV_1 = MakeComputeShaderTexture(0,1);
+	auto changed_SRV_2 = MakeComputeShaderTexture(0,2);
+	auto changed_SRV_3 = MakeComputeShaderTexture(0,3);
 
 
 	DebugShader = make_shared<Shader>(L"TextureDebug.fx");
@@ -103,7 +106,7 @@ void TexutreBufferDemo::Init()
 		auto obj = make_shared<DefaultObject>(DEVICE, CONTEXT);
 
 		obj->GetOrAddTransform()->SetScale(Vec3(200.f, 200.f, 1.f));
-		obj->GetOrAddTransform()->SetPosition(Vec3(-0, -0, 1.f));
+		obj->GetOrAddTransform()->SetPosition(Vec3(-250,250, 1.f));
 
 		obj->AddComponent(make_shared<MeshRenderer>());
 
@@ -118,13 +121,108 @@ void TexutreBufferDemo::Init()
 
 		obj->GetMeshRenderer()->SetMaterial(mat);
 		obj->GetMeshRenderer()->SetMesh(mesh);
+		obj->GetMeshRenderer()->SetPass(1);
 
+		obj->SetLayerIndex(eLayer::Layer_UI);
+		SCENE->GetCurrentScene()->Add(obj);
+		
+	}
+
+	{
+		auto obj = make_shared<DefaultObject>(DEVICE, CONTEXT);
+
+		obj->GetOrAddTransform()->SetScale(Vec3(200.f, 200.f, 1.f));
+		obj->GetOrAddTransform()->SetPosition(Vec3(-250, -250, 1.f));
+
+		obj->AddComponent(make_shared<MeshRenderer>());
+
+		auto mesh = make_shared<Mesh>();
+		mesh->CreateQuad();
+
+		auto mat = make_shared<Material>();
+		mat->SetShader(DebugShader);
+		shared_ptr<Texture> tex = make_shared<Texture>();
+		tex->SetSRV(changed_SRV_1);
+		mat->SetDiffuseTexture(tex);
+
+		obj->GetMeshRenderer()->SetMaterial(mat);
+		obj->GetMeshRenderer()->SetMesh(mesh);
+		obj->GetMeshRenderer()->SetPass(1);
 		obj->SetLayerIndex(eLayer::Layer_UI);
 		SCENE->GetCurrentScene()->Add(obj);
 
 	}
+	{
+		auto obj = make_shared<DefaultObject>(DEVICE, CONTEXT);
 
+		obj->GetOrAddTransform()->SetScale(Vec3(200.f, 200.f, 1.f));
+		obj->GetOrAddTransform()->SetPosition(Vec3(250, -250, 1.f));
 
+		obj->AddComponent(make_shared<MeshRenderer>());
+
+		auto mesh = make_shared<Mesh>();
+		mesh->CreateQuad();
+
+		auto mat = make_shared<Material>();
+		mat->SetShader(DebugShader);
+		shared_ptr<Texture> tex = make_shared<Texture>();
+		tex->SetSRV(changed_SRV_2);
+		mat->SetDiffuseTexture(tex);
+
+		obj->GetMeshRenderer()->SetMaterial(mat);
+		obj->GetMeshRenderer()->SetMesh(mesh);
+		obj->GetMeshRenderer()->SetPass(1);
+		obj->SetLayerIndex(eLayer::Layer_UI);
+		SCENE->GetCurrentScene()->Add(obj);
+
+	}
+	{
+		auto obj = make_shared<DefaultObject>(DEVICE, CONTEXT);
+
+		obj->GetOrAddTransform()->SetScale(Vec3(200.f, 200.f, 1.f));
+		obj->GetOrAddTransform()->SetPosition(Vec3(250, 250, 1.f));
+
+		obj->AddComponent(make_shared<MeshRenderer>());
+
+		auto mesh = make_shared<Mesh>();
+		mesh->CreateQuad();
+
+		auto mat = make_shared<Material>();
+		mat->SetShader(DebugShader);
+		shared_ptr<Texture> tex = make_shared<Texture>();
+		tex->SetSRV(changed_SRV_3);
+		mat->SetDiffuseTexture(tex);
+
+		obj->GetMeshRenderer()->SetMaterial(mat);
+		obj->GetMeshRenderer()->SetMesh(mesh);
+		obj->GetMeshRenderer()->SetPass(1);
+		obj->SetLayerIndex(eLayer::Layer_UI);
+		SCENE->GetCurrentScene()->Add(obj);
+
+	}
+	{
+		auto obj = make_shared<DefaultObject>(DEVICE, CONTEXT);
+
+		obj->GetOrAddTransform()->SetScale(Vec3(200.f, 200.f, 1.f));
+		obj->GetOrAddTransform()->SetPosition(Vec3(0, 0, 1.f));
+
+		obj->AddComponent(make_shared<MeshRenderer>());
+
+		auto mesh = make_shared<Mesh>();
+		mesh->CreateQuad();
+
+		auto mat = make_shared<Material>();
+		mat->SetShader(DebugShader);
+
+		mat->SetDiffuseTexture(RESOURCES->Get<Texture>(L"Atrox"));
+
+		obj->GetMeshRenderer()->SetMaterial(mat);
+		obj->GetMeshRenderer()->SetMesh(mesh);
+		obj->GetMeshRenderer()->SetPass(1);
+		obj->SetLayerIndex(eLayer::Layer_UI);
+		SCENE->GetCurrentScene()->Add(obj);
+
+	}
 	 
 
 	SCENE->GetCurrentScene()->Start();
@@ -206,7 +304,7 @@ void TexutreBufferDemo::Render()
 	
 }
 
-Microsoft::WRL::ComPtr<ID3D11ShaderResourceView> TexutreBufferDemo::MakeComputeShaderTexture()
+Microsoft::WRL::ComPtr<ID3D11ShaderResourceView> TexutreBufferDemo::MakeComputeShaderTexture(UINT tech , UINT pass)
 {
 	auto shader = make_shared<Shader>(L"10.TextureBufferDemo.fx");
 
@@ -222,7 +320,7 @@ Microsoft::WRL::ComPtr<ID3D11ShaderResourceView> TexutreBufferDemo::MakeComputeS
 
 	uint32 x = max(1, (width + 31) / 32);
 	uint32 y = max(1, (height + 31) / 32);
-	shader->Dispatch(0, 0, x, y, arraySize);
+	shader->Dispatch(tech, pass, x, y, arraySize);
 
 	return textureBuffer->GetOutputSRV();
 }

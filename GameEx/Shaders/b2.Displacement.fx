@@ -1,6 +1,6 @@
 #include "GlobalHelper.fx"
 #include "LightHelper.fx"
-
+#include "ShadowHelper.fx"
 cbuffer cbPerFrame
 {
 
@@ -22,7 +22,7 @@ struct VertexOut
     float2 Tex : TEXCOORD;
     float3 NormalW : NORMAL;
     float3 TangentW : TANGENT;
-    
+   
     float TessFactor : TESS;    
 };
 
@@ -94,7 +94,7 @@ struct DomainOut
     float2 Tex : TEXCOORD;
     float3 NormalW : NORMAL;
     float3 TangentW : TANGENT;
-   
+    float4 ShadowPosH : TEXCOORD1;
 };
 
 
@@ -159,7 +159,7 @@ DomainOut DS(PatchTess patchTess,
 
     // Project to homogeneous clip space.
     dout.PosH = mul(float4(dout.PosW, 1.0f), ViewProj);
-
+    dout.ShadowPosH = mul(float4(dout.PosW, 1.f), shadowtransform);
     return dout;
 }
 
@@ -188,6 +188,10 @@ float4 PS(DomainOut input):SV_Target
     
     
     int a = numOfDirLight;
+    float3 shadow = float3(1.0f, 1.0f, 1.0f);
+    shadow[0] = CalcShadowFactor(samShadow, ShadowMap, input.ShadowPosH);
+    
+    
     [unroll]
     for(int i = 0; i < 1; ++i)
     {
@@ -195,8 +199,8 @@ float4 PS(DomainOut input):SV_Target
         
         ComputeDirectionalLight(Mat, dir_light[0], normal, cameraPos - input.PosW, A, D, S);
         totalA = totalA + A;
-        totalD = totalD + D;
-        totalS += totalS + S;
+        totalD = totalD + D*shadow[i];
+        totalS += totalS + S*shadow[i];
         
     }
        

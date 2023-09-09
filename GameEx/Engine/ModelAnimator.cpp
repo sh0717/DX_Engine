@@ -15,9 +15,9 @@ ModelAnimator::ModelAnimator(shared_ptr<Shader> shader)
 
 
 
-	mTweenDesc.next.animIndex = 1 + rand() % 2;
-	mTweenDesc.curr.animIndex =1 +rand()%2;
-	mTweenDesc.tweenSumTime += rand() % 100;
+	mTweenDesc.next.animIndex =1;
+	mTweenDesc.curr.animIndex =1;
+	mTweenDesc.tweenSumTime += 0;
 }
 
 ModelAnimator::~ModelAnimator()
@@ -29,6 +29,16 @@ void ModelAnimator::Update()
 {
 	//UpdateTweenData();
 	//어짜피 이제 instancing 에서 렌더링할거다
+	if (GetTransform()->mode == eTransformMode::Idle) {
+		mTweenDesc.next.animIndex = 0;
+		mTweenDesc.curr.speed = 0.00001;
+		mTweenDesc.curr.sumTime = 0.00001;
+	}
+	else {
+		mTweenDesc.next.animIndex = 1;
+		mTweenDesc.curr.animIndex = 1;
+	}
+
 	return; 
 
 
@@ -196,6 +206,21 @@ void ModelAnimator::RenderInstancing(shared_ptr<class InstancingBuffer>& buffer)
 	// SRV를 통해 정보 전달//애니메이션의 트랜스폼들 저장 
 	mShader->GetSRV("TransformMap")->SetResource(mSRV.Get());
 
+
+	//about shadow
+	ShadowDesc shadow_desc;
+	if (SCENE->GetCurrentScene()->GetLights().size() > 0) {
+		shadow_desc.shadowtransform = SCENE->GetCurrentScene()->GetLights()[0]->GetLight()->GetShadowTransform();
+	}
+
+	mShader->PushShadowBuffer(shadow_desc);
+	if (SCENE->GetCurrentScene()->GetLights().size() > 0) {
+		mShader->GetSRV("ShadowMap")->SetResource(SCENE->GetCurrentScene()->GetLights()[0]->GetLight()->GetShadowMap()->GetDepthMapSRV().Get());
+	}
+
+	//////
+
+
 	// Bones
 	BoneDesc boneDesc;
 
@@ -361,6 +386,9 @@ void ModelAnimator::CreateAnimationTransform(uint32 index)
 	//per frame
 	for (uint32 f = 0; f < animation->frameCount; ++f) {
 		//per bone
+		if (f >= 500) {
+			break;
+		}
 		for (uint32 b = 0; b < mModel->GetBoneCount(); ++b) {
 			
 			shared_ptr<ModelBone> bone = mModel->GetBoneByIndex(b);

@@ -279,6 +279,9 @@
     <ClInclude Include="TextureBuffer.h">
       <Filter>5.ComputeShader</Filter>
     </ClInclude>
+    <ClInclude Include="CBehavior.h">
+      <Filter>4.Components</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -469,6 +472,9 @@
     </ClCompile>
     <ClCompile Include="TextureBuffer.cpp">
       <Filter>5.ComputeShader</Filter>
+    </ClCompile>
+    <ClCompile Include="CBehavior.cpp">
+      <Filter>4.Components</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

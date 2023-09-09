@@ -15,14 +15,17 @@ private:
 
 
 	
+	shared_ptr<Shader> waterlightShader;
 
+	shared_ptr<Shader> treeShader;
 	
 
 	
 	shared_ptr<DefaultObject> mCamera;
 	//shared_ptr<DefaultObject> mCameraOverlap;
 	shared_ptr<DefaultObject> UICamera;
-	
+	shared_ptr<DefaultObject> ParticleCamera;
+	shared_ptr<DefaultObject> mOverlapCamera;
 
 
 	shared_ptr<DefaultObject> cubeObj;
@@ -36,6 +39,8 @@ private:
 	shared_ptr<Shader> DisplacementShaer;
 
 	shared_ptr<DefaultObject> _obj;
+	shared_ptr<DefaultObject> mTerrain;
+
 
 
 	bool show_demo_window = true;

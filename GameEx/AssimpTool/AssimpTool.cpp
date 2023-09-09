@@ -5,6 +5,22 @@ void AssimpTool::Init()
 {
 	{
 		shared_ptr<Converter> converter = make_shared<Converter>();
+		converter->ReadAssetFile(L"Dino/irex.fbx");
+		converter->ExportModelData(L"Irex/Irex");
+		converter->ExportMaterialData(L"Irex/Irex");
+
+	
+
+	}
+	{
+		shared_ptr<Converter> converter = make_shared<Converter>();
+		converter->ReadAssetFile(L"Dino/raptor.fbx");
+		converter->ExportModelData(L"Raptor/Raptor");
+		converter->ExportMaterialData(L"Raptor/Raptor");
+
+	}
+	/*{
+		shared_ptr<Converter> converter = make_shared<Converter>();
 
 
 		converter->ReadAssetFile(L"Kachujin/Mesh.fbx");
@@ -14,8 +30,8 @@ void AssimpTool::Init()
 
 		
 		
-	}
-	{
+	}*/
+	/*{
 		shared_ptr<Converter> converter = make_shared<Converter>();
 
 
@@ -32,7 +48,7 @@ void AssimpTool::Init()
 
 		converter->ExportAnimationData(L"Kachujin/Slash");
 
-	}
+	}*/
 
 
 	

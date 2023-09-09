@@ -1,6 +1,6 @@
 #include "pch.h"
 #include "CameraScript.h"
-
+#include "Terrain.h"
 void CameraScript::Start()
 {
 
@@ -10,7 +10,12 @@ void CameraScript::Start()
 
 void CameraScript::Update()
 {
-
+	if (INPUT->GetButton(KEY_TYPE::Z)) {
+		mode = 0;
+	}
+	else if (INPUT->GetButton(KEY_TYPE::C)) {
+		mode = 1;
+	}
 
 }
 
@@ -34,7 +39,7 @@ void CameraScript::LateUpdate()
 		GetTransform()->Strafe(mSpeed * dt);
 	}
 
-	
+
 
 
 	//if (INPUT->GetButton(KEY_TYPE::Q))
@@ -84,4 +89,16 @@ void CameraScript::LateUpdate()
 	mPos.x = x;
 	mPos.y = y;
 
+
+	if (mode == 0) {
+
+		auto& terrain_vector = SCENE->GetCurrentScene()->GetTerrain();
+
+		if (terrain_vector.size() > 0) {
+			auto terrain = terrain_vector[0]->GetTerrain();
+			Vec3 pos = GetTransform()->GetPosition();
+			pos.y = terrain->GetHeight(pos.x, pos.z) + 1.8f;
+			GetTransform()->ChangeHeight(pos.y);
+		}
+	}
 }

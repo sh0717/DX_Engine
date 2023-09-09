@@ -119,6 +119,10 @@ void Scene::Add(shared_ptr<DefaultObject> object)
 		
 	}
 
+	if (object->GetTerrain() != nullptr) {
+		mTerrain.push_back(object);
+	}
+
 	
 }
 

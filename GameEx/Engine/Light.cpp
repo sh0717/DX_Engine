@@ -18,7 +18,7 @@ void Light::Update()
 	Vec3 lightDir = mDirLigthDesc.Direction;
 	lightDir.Normalize();
 
-	Vec3 lightPos = -2.0f * 30.f * lightDir;
+	Vec3 lightPos = -2.0f * 70.f * lightDir;
 
 	Vec3 targetPos = Vec3(0.f);
 	XMVECTOR up = ::XMVectorSet(0.0f, 1.0f, 0.0f, 0.0f);
@@ -29,12 +29,12 @@ void Light::Update()
 	::XMStoreFloat3(&sphereCenterLS, ::XMVector3TransformCoord(targetPos, V));
 
 	// Ortho frustum in light space encloses scene.
-	float l = sphereCenterLS.x - 30.f;
-	float b = sphereCenterLS.y - 30.f;
-	float n = sphereCenterLS.z - 30.f;
-	float r = sphereCenterLS.x + 30.f;
-	float t = sphereCenterLS.y + 30.f;
-	float f = sphereCenterLS.z + 30.f;
+	float l = sphereCenterLS.x - 70.f;
+	float b = sphereCenterLS.y - 70.f;
+	float n = sphereCenterLS.z - 70.f;
+	float r = sphereCenterLS.x + 70.f;
+	float t = sphereCenterLS.y + 70.f;
+	float f = sphereCenterLS.z + 70.f;
 	XMMATRIX P = ::XMMatrixOrthographicOffCenterLH(l, r, b, t, n, f);
 
 

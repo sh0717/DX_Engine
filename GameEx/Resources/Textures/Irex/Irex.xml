@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Materials>
+    <Material>
+        <Name>spines_blinn</Name>
+        <DiffuseFile>Spines-TM_u0_v0.tif</DiffuseFile>
+        <SpecularFile>Spines-TM_u0_v0.tif</SpecularFile>
+        <NormalFile>Spines-NM_u0_v0.tif</NormalFile>
+        <Ambient R="0" G="0" B="0" A="1"/>
+        <Diffuse R="0.80000001" G="0.80000001" B="0.80000001" A="1"/>
+        <Specular R="0.5" G="0.5" B="0.5" A="6.3117909"/>
+        <Emissive R="0" G="0" B="0" A="1"/>
+    </Material>
+    <Material>
+        <Name>tongue_blinn</Name>
+        <DiffuseFile>Tongue-TM_u0_v0.tif</DiffuseFile>
+        <SpecularFile>Tongue-TM_u0_v0.tif</SpecularFile>
+        <NormalFile>Tongue-NM_u0_v0.tif</NormalFile>
+        <Ambient R="0" G="0" B="0" A="1"/>
+        <Diffuse R="0.80000001" G="0.80000001" B="0.80000001" A="1"/>
+        <Specular R="0.5" G="0.5" B="0.5" A="6.3117909"/>
+        <Emissive R="0" G="0" B="0" A="1"/>
+    </Material>
+    <Material>
+        <Name>body_blinn</Name>
+        <DiffuseFile>Body-TM_u0_v0.tif</DiffuseFile>
+        <SpecularFile>Body-Spec_u0_v0.tif</SpecularFile>
+        <NormalFile>Body-NM_u0_v0.tif</NormalFile>
+        <Ambient R="0" G="0" B="0" A="1"/>
+        <Diffuse R="0.80000001" G="0.80000001" B="0.80000001" A="1"/>
+        <Specular R="0.5" G="0.5" B="0.5" A="6.3117909"/>
+        <Emissive R="0" G="0" B="0" A="1"/>
+    </Material>
+    <Material>
+        <Name>iris_surface</Name>
+        <DiffuseFile></DiffuseFile>
+        <SpecularFile></SpecularFile>
+        <NormalFile></NormalFile>
+        <Ambient R="0" G="0" B="0" A="1"/>
+        <Diffuse R="0" G="0" B="0" A="1"/>
+        <Specular R="0" G="0" B="0" A="1"/>
+        <Emissive R="0" G="0" B="0" A="1"/>
+    </Material>
+    <Material>
+        <Name>eyes_blinn</Name>
+        <DiffuseFile>Eyes-TM_u0_v0.tif</DiffuseFile>
+        <SpecularFile>Eyes-TM_u0_v0.tif</SpecularFile>
+        <NormalFile>Eyes-NM_u0_v0.tif</NormalFile>
+        <Ambient R="0" G="0" B="0" A="1"/>
+        <Diffuse R="0.80000001" G="0.80000001" B="0.80000001" A="1"/>
+        <Specular R="0.5" G="0.5" B="0.5" A="6.3117909"/>
+        <Emissive R="0" G="0" B="0" A="1"/>
+    </Material>
+    <Material>
+        <Name>eyesMem_blinn</Name>
+        <DiffuseFile>Eyes_mem-TM_u0_v0.tif</DiffuseFile>
+        <SpecularFile>Eyes_mem-TM_u0_v0.tif</SpecularFile>
+        <NormalFile>Eyes_mem-NM_u0_v0.tif</NormalFile>
+        <Ambient R="0" G="0" B="0" A="1"/>
+        <Diffuse R="0.80000001" G="0.80000001" B="0.80000001" A="1"/>
+        <Specular R="0.5" G="0.5" B="0.5" A="6.3117909"/>
+        <Emissive R="0" G="0" B="0" A="1"/>
+    </Material>
+    <Material>
+        <Name>teeth_blinn</Name>
+        <DiffuseFile>Teeth-TM_u0_v0.tif</DiffuseFile>
+        <SpecularFile>Teeth-TM_u0_v0.tif</SpecularFile>
+        <NormalFile>Teeth-NM_u0_v0.tif</NormalFile>
+        <Ambient R="0" G="0" B="0" A="1"/>
+        <Diffuse R="0.80000001" G="0.80000001" B="0.80000001" A="1"/>
+        <Specular R="0.5" G="0.5" B="0.5" A="6.3117909"/>
+        <Emissive R="0" G="0" B="0" A="1"/>
+    </Material>
+</Materials>

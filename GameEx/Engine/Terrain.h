@@ -15,9 +15,9 @@ public:
 	float GetWidth() const;
 
 	//terrain 의 총 세로길이
-	float GetHeight() const;
+	float GetDepth() const;
 
-
+	float GetHeight(float x, float z) const;
 
 private:
 	void BuildVBandIB();

@@ -58,9 +58,46 @@ float Terrain::GetWidth() const
 	return (heightmapWidth - 1) * cellSpacing;
 }
 
-float Terrain::GetHeight() const
+float Terrain::GetDepth() const
 {
 	return (heightmapHeight - 1) * cellSpacing;
+}
+
+float Terrain::GetHeight(float x, float z) const
+{
+	float c = (x + 0.5f * GetWidth()) / cellSpacing;
+	float d = (z - 0.5f * GetDepth()) / -cellSpacing;
+
+	int row = (int)floorf(d);
+	int col = (int)floorf(c);
+
+	
+	// A*--*B
+	//  | /|
+	//  |/ |
+	// C*--*D
+	float A = _heightmap[row * heightmapWidth + col];
+	float B = _heightmap[row * heightmapWidth + col + 1];
+	float C = _heightmap[(row + 1) * heightmapWidth + col];
+	float D = _heightmap[(row + 1) * heightmapWidth + col + 1];
+
+	// Where we are relative to the cell.
+	float s = c - (float)col;
+	float t = d - (float)row;
+
+	// If upper triangle ABC.
+	if (s + t <= 1.0f)
+	{
+		float uy = B - A;
+		float vy = C - A;
+		return A + s * uy + t * vy;
+	}
+	else // lower triangle DCB.
+	{
+		float uy = C - D;
+		float vy = B - D;
+		return D + (1.0f - s) * uy + (1.0f - t) * vy;
+	}
 }
 
 void Terrain::BuildVBandIB()
@@ -69,11 +106,11 @@ void Terrain::BuildVBandIB()
 	std::vector<Vertex::VertexTerrain> patchVertices(mNumPatchVertRows * mNumPatchVertCols);
 
 	float halfWidth = 0.5f * GetWidth();
-	float halfDepth = 0.5f * GetHeight();
+	float halfDepth = 0.5f * GetDepth();
 
 	//패치당 길이 
 	float patchWidth = GetWidth() / (mNumPatchVertCols - 1);
-	float patchDepth = GetHeight() / (mNumPatchVertRows - 1);
+	float patchDepth = GetDepth() / (mNumPatchVertRows - 1);
 	float du = 1.0f / (mNumPatchVertCols - 1);
 	float dv = 1.0f / (mNumPatchVertRows - 1);
 

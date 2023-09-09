@@ -38,8 +38,16 @@ VertexOut VS(VertexIn vin)
 float4 PS(VertexOut pin) : SV_Target
 {
    
+    return DiffuseMap.Sample(samLinear, pin.Tex).rrrr;
+}
+
+float4 PSrgba(VertexOut pin) : SV_Target
+{
+   
     return DiffuseMap.Sample(samLinear, pin.Tex).rgba;
 }
+
+
 
 technique11 ViewArgbTech
 {
@@ -49,4 +57,13 @@ technique11 ViewArgbTech
         SetGeometryShader(NULL);
         SetPixelShader(CompileShader(ps_5_0, PS()));
     }
+
+
+    pass P1
+    {
+        SetVertexShader(CompileShader(vs_5_0, VS()));
+        SetGeometryShader(NULL);
+        SetPixelShader(CompileShader(ps_5_0, PSrgba()));
+    }
+   
 }

@@ -19,7 +19,7 @@ ParticleSystem::~ParticleSystem()
 
 void ParticleSystem::Init()
 {	
-	mMaxParticles = 500;
+	mMaxParticles = 50;
 	BuildVB();
 	mRandomTextureSRV = Utils::CreateRandomTexture1DSRV(DEVICE);
 

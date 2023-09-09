@@ -27,5 +27,6 @@ enum eLayer
 {
 	Layer_Default = 0,
 	Layer_Overlap = 1,
-	Layer_UI = 2
+	Layer_UI = 2,
+	Layer_Particle=3
 };

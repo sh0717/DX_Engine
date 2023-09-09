@@ -18,7 +18,8 @@ void SphereCollider::Update()
 
 	Vec3  scale = GetTransform()->GetScale();
 
-	mBoundingSphere.Radius = mRadius * (max(max(scale.x, scale.y), scale.z));
+	//mBoundingSphere.Radius = mRadius * (max(max(scale.x, scale.y), scale.z));
+	mBoundingSphere.Radius = mRadius;
 }
 
 bool SphereCollider::IsIntersects(Ray& ray, OUT float& distance)
